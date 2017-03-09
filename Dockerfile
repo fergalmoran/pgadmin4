@@ -8,7 +8,7 @@ RUN \
    && pip3 install --upgrade pip \
    && pip install setuptools \
    && git clone git://git.postgresql.org/git/pgadmin4.git \
-   # && rm -rf pgadmin4/.git \
+   && rm -rf pgadmin4/.git \
    && pip install -r pgadmin4/requirements.txt \
    && apt-get -qy purge libpq-dev build-essential libpython3-all-dev git \
    && apt-get -qy --purge autoremove && apt-get -qy clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
